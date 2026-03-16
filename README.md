@@ -1,5 +1,5 @@
 🔒 Catatan: Kode sumber asli belum dapat dipublikasikan karena saat ini sedang dalam tahap pengembangan dan kebutuhan yang bersifat rahasia. 
-# 🚚 Agnostic SaaS Logistics Platform: E-Commerce & Fleet Management (Hybrid K-Means + Genetic Algorithm)
+# 🚚 SaaS Logistics Platform: E-Commerce & Fleet Management (Hybrid K-Means + Genetic Algorithm)
 
 Sistem informasi terintegrasi berbasis **Software as a Service (SaaS)** yang menggabungkan modul E-commerce (pemesanan) dengan mesin optimasi logistik cerdas. Aplikasi ini memecahkan masalah **Capacitated Vehicle Routing Problem (CVRP)** dengan membagi wilayah pengiriman secara otomatis kepada kurir dan menentukan urutan jalan paling efisien.
 
