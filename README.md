@@ -39,7 +39,7 @@ Sistem dirancang agar dapat digunakan oleh banyak perusahaan (*Company/Tenant*) 
 * **Isolasi Data (Data Privacy):** Setiap transaksi, data kurir, armada, dan paket dienkapsulasi menggunakan identifikasi `companyId`.
 * **Depot Management:** Setiap perusahaan dapat mengelola *Depot* (titik awal keberangkatan/dapur utama) mereka sendiri secara dinamis.
 
-### 2. Agnostic Logistics Engine (Separation of Concerns)
+### 2. Logistics Engine (Separation of Concerns)
 
 Pemisahan tegas antara ranah transaksi dan operasional:
 
