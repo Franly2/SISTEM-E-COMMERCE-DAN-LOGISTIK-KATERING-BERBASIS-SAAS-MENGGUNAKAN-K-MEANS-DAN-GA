@@ -72,9 +72,9 @@ Setelah paket terbagi per wilayah, GA bertugas mencari urutan kunjungan (*Permut
 
 Database dibagi menjadi 3 pilar utama untuk menjaga *Clean Architecture*:
 
-1. **Tenancy Domain:** `Company`, `Depot` (Infrastruktur SaaS).
-2. **Transaction Domain:** `User`, `Product`, `Order`, `OrderItem` (Logic Jual-Beli).
-3. **Logistics Domain:** `Vehicle`, `DriverLocation`, `Package`, `Route` (Logic CVRP & Armada).
+1. **Tenancy Domain:** `Tenant`, `Depot`, `Human`, `Product` (Infrastruktur SaaS).
+2. **Transaction Domain:** `Customer`, `Order`, (Logic Jual-Beli).
+3. **Logistics Domain:** `vrp` (Logic CVRP & Armada).
 
 ---
 
@@ -92,62 +92,6 @@ graph TD;
     E --> F[Tarik Garis Jalan via OSRM];
     F --> G[Rute & Polyline Tersimpan di DB];
     G --> H[Tampil di App Kurir & Dashboard Admin];
-
-```
-
----
-
-## ⚙️ Cara Menjalankan (Local Setup)
-
-### 1. Persiapan Backend (NestJS & Prisma)
-
-1. Masuk ke folder: `cd nest/vrp-backend`
-2. Install dependensi: `npm install`
-3. Konfigurasi file `.env`:
-```env
-DATABASE_URL="postgresql://user:password@localhost:5432/vrp"
-
-```
-
-
-4. Reset & Sinkronisasi Database ke Schema SaaS terbaru:
-```bash
-npx prisma db push --force-reset
-
-```
-
-
-5. Buat baseline migrasi:
-```bash
-npx prisma migrate dev --name init_saas_platform
-
-```
-
-
-*(Pilih 'y' jika diminta persetujuan reset).*
-6. Generate Client & Jalankan Seeder (Otomatis mengisi data Katering, Kurir, dan 50 Paket dummy):
-```bash
-npx prisma generate
-npx prisma db seed
-
-```
-
-
-7. Jalankan server: `npm run start:dev`
-
-### 2. Persiapan Frontend (Mobile - Expo)
-
-1. Masuk ke folder: `cd gui/mobile`
-2. Install dependensi: `npm install`
-3. Sesuaikan `API_URL` di konfigurasi dengan IP Local Laptop (IPv4) Anda.
-4. Jalankan Expo: `npx expo start`
-5. Buka di HP melalui aplikasi **Expo Go**.
-
-### 3. Persiapan Dashboard Admin (Web)
-
-1. Masuk ke folder: `cd gui/web`
-2. Install dependensi: `npm install`
-3. Jalankan versi web: `npm run dev`
 
 ---
 
