@@ -1,3 +1,6 @@
+# ⚠️ Status Proyek: Dalam Pengembangan (Tertutup)
+Kode sumber aplikasi ini belum bisa dibagikan kepada publik karena masih dalam tahap pengembangan tertutup.
+
 # 🚚 PEMBUATAN SISTEM E-COMMERCE DAN LOGISTIK KATERING BERBASIS SAAS MENGGUNAKAN K-MEANS DAN ALGORITMA GENETIKA
 
 Sistem informasi terintegrasi berbasis **Software as a Service (SaaS)** yang menggabungkan modul E-commerce (pemesanan) dengan mesin optimasi logistik cerdas. Aplikasi ini memecahkan masalah **Capacitated Vehicle Routing Problem (CVRP)** dengan membagi wilayah pengiriman secara otomatis kepada kurir dan menentukan urutan jalan paling efisien.
